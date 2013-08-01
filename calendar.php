@@ -345,7 +345,7 @@ class Calendar extends Event_Subject {
 		$date  = mktime(0, 0, 0, $this->month - 1, 1, $this->year);
 		$month = date('n', $date);
 		$year  = date('Y', $date);
-		$url   = self::query(array('m' => $month, 'y' => $year));
+		$url   = self::query(array('mon' => $month, 'yr' => $year));
 		
 		return $url;
 	}
@@ -410,7 +410,7 @@ class Calendar extends Event_Subject {
 		$date  = mktime(0, 0, 0, $this->month + 1, 1, $this->year);
 		$month = date('n', $date);
 		$year  = date('Y', $date);
-		$url   = self::query(array('m' => $month, 'y' => $year));
+		$url   = self::query(array('mon' => $month, 'yr' => $year));
 		
 		return $url;
 	}
