@@ -1,9 +1,9 @@
 <?php
 
 // Include dependencies
-require_once 'event_subject.php';
-require_once 'event_observer.php';
-require_once 'calendar_event.php';
+require_once ( dirname( __FILE__ ) . '/event_subject.php' );
+require_once ( dirname( __FILE__ ) . '/event_observer.php' );
+require_once ( dirname( __FILE__ ) . '/calendar_event.php' );
 
 /**
  * Calendar creation class.
