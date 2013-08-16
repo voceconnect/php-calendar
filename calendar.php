@@ -151,7 +151,8 @@ class Calendar extends Event_Subject {
 		$days = 0;
 		$week_number = 1;
 
-		if (($w = (int) date('w', $first) - $this->config['week_start']) < 0)
+		$w = (int) date('w', $first) - $this->config['week_start'];
+		if ($w < 0)
 		{
 			$w = (7 - $this->config['week_start']) + date('w', $first);
 		}
@@ -193,7 +194,8 @@ class Calendar extends Event_Subject {
 			$days++;
 		}
 		
-		if (($w = (int) date('w', $last) - $this->config['week_start']) < 0)
+		$w = (int) date('w', $last) - $this->config['week_start'];
+		if ($w < 0)
 		{
 			$w = (7 - $this->config['week_start']) + date('w', $last);
 		}
